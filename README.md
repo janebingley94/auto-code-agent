@@ -14,6 +14,11 @@ auto-code-agent/
 - LangGraph StateGraph 构建 + 条件边
 - 无 API key 时提供 Mock 结果
 
+## Phase 2 代码执行沙箱
+- 默认使用 subprocess 沙箱执行（10s 超时，5KB 输出上限）
+- 支持语言：Python / JavaScript / TypeScript（TypeScript 需安装 `ts-node`）
+- 可选 Docker 执行：在 state 中设置 `use_docker=True`
+
 ## 运行后端
 ```
 cd backend
